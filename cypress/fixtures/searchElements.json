@@ -1,0 +1,23 @@
+{
+"search": {
+    "objeto": "#objeto",
+    "processo": "#processo",
+    "orgao": "#orgao",
+    "botaoBuscar": ".btn-pesquisa-p",
+    "buscaAvancada": ".busca-av",
+    "blocoBuscaAvancada": ".busca-av-block"
+  },
+  "selects": {
+    "status": "#Status",
+    "modalidade": "#Modalidade",
+    "realizacao": "#Realizacao",
+    "julgamento": "#julgamento",
+    "uf": "#UF",
+    "municipios": "#municipios"
+  },
+  "labels": {
+    "filtro": "label[for='filtro']",
+    "processo": "label[for='processo']",
+    "orgao": "label[for='orgao']"
+  }
+}
