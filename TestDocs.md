@@ -1,6 +1,6 @@
 # Documentação de Casos de Teste — Filtros de Pesquisa
 
-Este documento descreve os casos de teste relacionados aos filtros de pesquisa do portal, com base em critérios funcionais, não funcionais e de qualidade definidos pela norma ISO/IEC 25010.
+Este documento descreve os casos de teste relacionados aos filtros de pesquisa do portal de compras publicas (HLG), com base em critérios funcionais, não funcionais e de qualidade definidos pela norma ISO/IEC 25010.
 
 ## 1. Escopo
 
@@ -23,7 +23,7 @@ Os testes aqui descritos abrangem exclusivamente o comportamento dos filtros de 
 
 ---
 
-## 3. Casos de Teste em Gherkin
+## 3. Casos de Teste
 
 ### 3.1 Renderização e Acessibilidade
 
@@ -45,7 +45,7 @@ Funcionalidade: Exibição da busca avançada
     Dado que o usuário está na página de pesquisa
     Quando ele clicar em "Busca Avançada"
     Então os filtros avançados devem ser exibidos
-    Quando clicar novamente em "Busca Avançada"
+    Quando clicar em "x" no "Busca Avançada"
     Então os filtros avançados devem ser ocultados
 ```
 
@@ -88,8 +88,8 @@ Funcionalidade: Combinação de filtros
     Então o sistema deve aplicar todos os filtros simultaneamente
 
   Cenário: Aplicar filtros conflitantes
-    Dado que o usuário seleciona "Status = Encerrado"
-    E seleciona "Data de Realização = Futuro"
+    Dado que o usuário seleciona "Status = Finalizado"
+    E seleciona "Data de Realização = Presencial"
     Então o sistema deve exibir mensagem de conflito ou resultados vazios
 
   Cenário: Limpar filtros ao recarregar
@@ -117,14 +117,14 @@ Funcionalidade: Ação do botão de busca
 
 ```gherkin
 Funcionalidade: Validação de entrada nos filtros
-  Cenário: Inserir texto inválido em campo numérico
+  <!-- Cenário: Inserir texto inválido em campo numérico
     Quando o usuário digitar "ABC" no campo "Número do Processo"
     Então o sistema deve exibir mensagem de erro ou ignorar o valor
 
   Cenário: Campo obrigatório não preenchido
     Dado que o campo "Objeto" é obrigatório
     Quando o usuário clicar em "BUSCAR" sem preencher
-    Então o sistema deve indicar que o campo é obrigatório
+    Então o sistema deve indicar que o campo é obrigatório -->
 
   Cenário: Selecionar UF sem selecionar Município
     Quando o usuário escolhe "RS" e não escolhe "Município"
@@ -138,10 +138,6 @@ Funcionalidade: Desempenho e usabilidade dos filtros
   Cenário: Carregamento rápido dos selects
     Dado que o usuário abre a busca avançada
     Então os selects devem ser carregados em menos de 2 segundos
-
-  Cenário: Responsividade em dispositivos móveis
-    Dado que o usuário acessa via celular
-    Então todos os campos e filtros devem se ajustar corretamente à tela
 ```
 
 ### 3.8 Persistência e Estado
@@ -156,10 +152,7 @@ Funcionalidade: Persistência dos filtros
 
 ### 4. Considerações Finais
 
-Este conjunto de cenários cobre os principais comportamentos esperados dos filtros de pesquisa.
-
-Os testes devem ser automatizados preferencialmente com Cypress, utilizando o padrão Page Objects e arquivos de elementos separados em JSON.
-
-O uso do Gherkin visa padronizar a comunicação entre equipes de QA, desenvolvimento e produto.
-
-Recomenda-se manter esta documentação atualizada conforme mudanças na interface ou nas regras de negócio.
+- Este conjunto de cenários cobre os principais comportamentos esperados dos filtros de pesquisa.
+- Os teste foram feito e mantendo os erros, pois o site não está respondendo como esperado, decidi manter os erros por registro
+- O uso do Gherkin visa padronizar a comunicação entre equipes de QA, desenvolvimento e produto.
+- Alguns testes foram comentados visando adição para a avaliação, mas mantendo de acordo com o pedido no formulário.

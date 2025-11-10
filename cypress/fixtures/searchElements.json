@@ -1,12 +1,20 @@
 {
-"search": {
+  "container": {
+    "root": "section.container-fluid.pesquisa-processo",
+    "innerContainer": "section.container-fluid.pesquisa-processo > .container",
+    "form": "form#pesquisa-p"
+  },
+
+  "search": {
+    "titulo": "h2:contains('Pesquisa de Processos')",
     "objeto": "#objeto",
     "processo": "#processo",
     "orgao": "#orgao",
-    "botaoBuscar": ".btn-pesquisa-p",
+    "botaoBuscar": ".btn-pesquisa-p.second",
     "buscaAvancada": ".busca-av",
     "blocoBuscaAvancada": ".busca-av-block"
   },
+
   "selects": {
     "status": "#Status",
     "modalidade": "#Modalidade",
@@ -15,9 +23,33 @@
     "uf": "#UF",
     "municipios": "#municipios"
   },
+
+  "periodo": {
+    "label": "label[for='periodo']",
+    "calendarBlock": ".calendario-block",
+    "botaoLimpar": ".clean-date a",
+    "tipoAbertura": "#customRadioInline1",
+    "tipoPublicacao": "#customRadioInline2",
+    "dias": ".vfc-day .vfc-span-day",
+    "hoje": ".vfc-span-day.vfc-today"
+  },
+
+  "classes": {
+    "buscaAvAberta": ".busca-av.open",
+    "buscaAvFechada": ".busca-av:not(.open)",
+    "selectPadrao": ".custom-select"
+  },
+
   "labels": {
-    "filtro": "label[for='filtro']",
+    "objeto": "label[for='filtro']",
     "processo": "label[for='processo']",
-    "orgao": "label[for='orgao']"
+    "orgao": "label[for='orgao']",
+    "periodo": "label[for='periodo']"
+  },
+
+  "icons": {
+    "iconeFiltro": ".ico-cp.cp-filtro",
+    "iconeFechar": ".ico-cp.cp-fechar",
+    "iconeCalendario": ".ico-cp.cp-calendario"
   }
 }
