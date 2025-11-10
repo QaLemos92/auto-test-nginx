@@ -63,3 +63,4 @@ Para um navegador específico (ex: Chrome):
 ```bash
 npx cypress run --browser chrome
 ```
+Para mais detalhes sobre o teste, acesse o [Documento de teste](https://github.com/QaLemos92/auto-test-nginx/blob/main/TestDocs.md)
