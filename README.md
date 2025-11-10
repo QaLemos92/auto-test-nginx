@@ -7,20 +7,20 @@ Os testes seguem o padrão **Page Object Model (POM)** e são documentados em **
 
 ## 📂 Estrutura do Projeto
 
-auto-test-pcp/
-├── cypress/
-│ ├── e2e/
-│ │ ├── page # Organização dos comando utilizados em teste
-│ │ └── test # Casos de testes automatizados
-│ ├── fixtures/
-│ │ └── searchElements.json # organização dos elementos da página index
-│ ├── support/
-│ │ ├── commands.js
-│ │ └── e2e.js 
-├── testeDoc.md # Documentação de cenários de teste (Gherkin)
-├── package.json
-├── cypress.config.js
-└── README.md
+auto-test-pcp/ \
+├── cypress/ \
+│ ├── e2e/ \
+│ │ ├── page # Organização dos comando utilizados em teste \
+│ │ └── test # Casos de testes automatizados \
+│ ├── fixtures/ \
+│ │ └── searchElements.json # organização dos elementos da página index \
+│ ├── support/ \
+│ │ ├── commands.js \
+│ │ └── e2e.js  \
+├── testeDoc.md # Documentação de cenários de teste (Gherkin) \
+├── package.json \
+├── cypress.config.js \
+└── README.md \
 
 
 ---
